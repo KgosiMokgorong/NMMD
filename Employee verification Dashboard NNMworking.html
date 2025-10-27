@@ -24,151 +24,153 @@
             color: #333;
         }
         
-        .dashboard-header {
-            background: linear-gradient(135deg, var(--primary), var(--dark));
+   .dashboard-header {
+            background: linear-gradient(135deg, rgba(44, 62, 80, 0.85), rgba(52, 73, 94, 0.85)), url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIyMDAiIHZpZXdCb3g9IjAgMCAxMjAwIDQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMmMzZTUwO3N0b3Atb3BhY2l0eToxIiAvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMzNDQ5NWU7c3RvcC1vcGFjaXR5OjEiIC8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIgLz4KICA8dGV4dCB4PSI1MCUiIHk9IjQ1JSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjQ4IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+RWR1Y2F0aW9uPC90ZXh0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNTUlIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5EZXBhcnRtZW50PC90ZXh0PgogIDx0ZXh0IHg9IjUwJSIgeT0iNzAlIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzIiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5Ob3J0aCBXZXN0IFByb3ZpbmNpYWwgR292ZXJubWVudDwvdGV4dD4KICA8dGV4dCB4PSI1MCUiIHk9Ijg1JSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjI4IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UkVQVUJMSUMgT0YgU09VVEggQUZSSUNBPC90ZXh0Pgo8L3N2Zz4=');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             color: white;
             padding: 20px 0;
             border-radius: 0 0 15px 15px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            margin-bottom: 25px;
-        }
-        
-        .stat-card {
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
-            height: 100%;
-            border-top: 4px solid var(--secondary);
-        }
-        
-        .stat-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-        }
-        
-        .stat-card.success {
-            border-top-color: var(--success);
-        }
-        
-        .stat-card.warning {
-            border-top-color: var(--warning);
-        }
-        
-        .stat-card.danger {
-            border-top-color: var(--danger);
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0;
-        }
-        
-        .stat-icon {
-            font-size: 2.5rem;
-            opacity: 0.8;
-            margin-bottom: 15px;
-        }
-        
-        .chart-container {
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            margin-bottom: 25px;
-            height: 100%;
-        }
-        
-        .nav-tabs .nav-link {
-            font-weight: 600;
-            color: var(--dark);
-            border: none;
-            padding: 12px 20px;
-        }
-        
-        .nav-tabs .nav-link.active {
-            background-color: var(--secondary);
-            color: white;
-            border-radius: 8px;
-        }
-        
-        .tab-content {
-            background: white;
-            border-radius: 0 10px 10px 10px;
-            padding: 25px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-        
-        .table-responsive {
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        
-        .table thead {
-            background-color: var(--primary);
-            color: white;
-        }
-        
-        .badge-success {
-            background-color: var(--success);
-        }
-        
-        .badge-warning {
-            background-color: var(--warning);
-        }
-        
-        .badge-danger {
-            background-color: var(--danger);
-        }
-        
-        .progress {
-            height: 10px;
-            margin-bottom: 10px;
-        }
-        
-        .district-selector {
-            background-color: white;
-            border-radius: 8px;
-            padding: 15px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            margin-bottom: 20px;
-        }
-        
-        .filter-label {
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: var(--dark);
-        }
-        
-        .page-title {
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-        
-        .page-subtitle {
-            opacity: 0.8;
-            font-size: 1.1rem;
-        }
-        
-        .data-table {
-            font-size: 0.85rem;
-        }
-        
-        .data-table th {
-            font-weight: 600;
-        }
-        
-        .filter-active {
-            background-color: #e3f2fd !important;
-            border-left: 4px solid var(--secondary) !important;
-        }
-        
         .reset-filters {
             margin-top: 24px;
         }
-    </style>
+        
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .dashboard-header {
+                padding: 15px 0;
+                border-radius: 0 0 10px 10px;
+            }
+            
+            .page-title {
+                font-size: 1.5rem;
+                margin-bottom: 8px;
+            }
+            
+            .page-subtitle {
+                font-size: 0.9rem;
+            }
+            
+            .stat-number {
+                font-size: 1.8rem;
+            }
+            
+            .stat-icon {
+                font-size: 1.8rem;
+            }
+            
+            .stat-card {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+            
+            .chart-container {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+            
+            .district-selector {
+                padding: 15px;
+            }
+            
+            .filter-label {
+                font-size: 0.9rem;
+                margin-bottom: 6px;
+            }
+            
+            .form-select {
+                font-size: 0.9rem;
+                padding: 8px;
+            }
+            
+            .btn-group {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                gap: 8px;
+                margin-top: 15px;
+            }
+            
+            .btn-group .btn {
+                width: 100%;
+            }
+            
+            .nav-tabs .nav-link {
+                padding: 10px 12px;
+                font-size: 0.85rem;
+            }
+            
+            .data-table {
+                font-size: 0.75rem;
+            }
+            
+            .table-responsive {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            .col-md-8, .col-md-4, .col-md-3, .col-md-6 {
+                text-align: left !important;
+            }
+            
+            .text-end {
+                text-align: left !important;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .page-title {
+                font-size: 1.2rem;
+            }
+            
+            .page-subtitle {
+                font-size: 0.8rem;
+            }
+            
+            .stat-number {
+                font-size: 1.5rem;
+            }
+            
+            .stat-icon {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+            }
+            
+            .stat-card {
+                padding: 12px;
+            }
+            
+            .chart-container {
+                padding: 12px;
+            }
+            
+            .nav-tabs {
+                flex-wrap: wrap;
+            }
+            
+            .nav-tabs .nav-link {
+                padding: 8px 10px;
+                font-size: 0.8rem;
+                flex: 1 1 auto;
+            }
+            
+            .data-table {
+                font-size: 0.7rem;
+            }
+            
+            .data-table th,
+            .data-table td {
+                padding: 6px 4px;
+                white-space: nowrap;
+            }
+            
+            .container {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+       </style>
 </head>
 <body>
     <!-- Header -->
@@ -177,7 +179,7 @@
             <div class="row align-items-center">
                 <div class="col-md-8">
                     <h1 class="page-title"><i class="fas fa-chart-line me-2"></i>School Employee Verification Login Analytics Dashboard</h1>
-                    p class="page-subtitle">Ngaka Modiri Molema District | <span id="current-date"></span></p>
+                    <p class="page-subtitle">Ngaka Modiri Molema District | <span id="current-date"></span></p>
 
 <script>
   // Array of month names
@@ -505,6 +507,12 @@
     // Update the Data Period paragraph
     document.getElementById('data-period').textContent = `Data Period: 01/10/2025 - ${formattedDate}`;
 </script>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
            // Embedded Excel Data as JSON
         const excelData = {
             "successfulLogins": [
