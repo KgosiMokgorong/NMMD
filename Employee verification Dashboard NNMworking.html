@@ -481,31 +481,56 @@
         </div>
     </div>
 
-    <footer class="bg-dark text-light py-4 mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h5>School Employee Verification Login Analytics Dashboard</h5>
-                    <p class="mb-0">North West Province Education Department</p>
-                </div>
-                <div class="col-md-6 text-end">
-    <p class="mb-0">Last Updated: 27 October 2025</p>
-    <p class="mb-0" id="data-period">Data Period: 01/10/2025 - </p>
-    <p class="mb-0">Created by: K.Mokgorong EMIS Office NMMD</p>
-</div>
+   <footer class="bg-dark text-light py-4 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h5>School Employee Verification Login Analytics Dashboard</h5>
+                <p class="mb-0">North West Province Education Department</p>
+            </div>
+            <div class="col-md-6 text-end">
+                <p class="mb-0" id="last-updated">Last Updated: </p>
+                <p class="mb-0" id="data-period">Data Period: 01/10/2025 - </p>
+                <p class="mb-0">Created by: K.Mokgorong EMIS Office NMMD</p>
+            </div>
+        </div>
+    </div>
+</footer>
 
 <script>
-    // Get today's date
+document.addEventListener('DOMContentLoaded', () => {
     const today = new Date();
-    
-    // Format date as DD/MM/YYYY
+
+    // Function to format time as HH:MM:SS
+    const formatTime = (date) => {
+        const hours = String(date.getHours()).padStart(2, '0');
+        const minutes = String(date.getMinutes()).padStart(2, '0');
+        const seconds = String(date.getSeconds()).padStart(2, '0');
+        return `${hours}:${minutes}:${seconds}`;
+    };
+
+    // Format Last Updated as "DD Month YYYY HH:MM:SS"
+    const options = { day: '2-digit', month: 'long', year: 'numeric' };
+    const formattedLastUpdated = `${today.toLocaleDateString('en-GB', options)} ${formatTime(today)}`;
+
+    // Format Data Period end date as "DD/MM/YYYY" (no time)
     const day = String(today.getDate()).padStart(2, '0');
-    const month = String(today.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+    const month = String(today.getMonth() + 1).padStart(2, '0');
     const year = today.getFullYear();
-    const formattedDate = `${day}/${month}/${year}`;
-    
-    // Update the Data Period paragraph
-    document.getElementById('data-period').textContent = `Data Period: 01/10/2025 - ${formattedDate}`;
+    const formattedDataPeriodEnd = `${day}/${month}/${year}`;
+
+    // Update Last Updated
+    const lastUpdatedElement = document.getElementById('last-updated');
+    if (lastUpdatedElement) {
+        lastUpdatedElement.textContent = `Last Updated: ${formattedLastUpdated}`;
+    }
+
+    // Update Data Period
+    const dataPeriodElement = document.getElementById('data-period');
+    if (dataPeriodElement) {
+        dataPeriodElement.textContent = `Data Period: 01/10/2025 - ${formattedDataPeriodEnd}`;
+    }
+});
 </script>
             </div>
         </div>
