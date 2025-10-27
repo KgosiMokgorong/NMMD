@@ -25,7 +25,10 @@
         }
         
         .dashboard-header {
-            background: linear-gradient(135deg, var(--primary), var(--dark));
+            background: linear-gradient(135deg, rgba(44, 62, 80, 0.85), rgba(52, 73, 94, 0.85)), url('NMM district.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             color: white;
             padding: 20px 0;
             border-radius: 0 0 15px 15px;
@@ -167,6 +170,141 @@
         
         .reset-filters {
             margin-top: 24px;
+        }
+        
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .dashboard-header {
+                padding: 15px 0;
+                border-radius: 0 0 10px 10px;
+            }
+            
+            .page-title {
+                font-size: 1.5rem;
+                margin-bottom: 8px;
+            }
+            
+            .page-subtitle {
+                font-size: 0.9rem;
+            }
+            
+            .stat-number {
+                font-size: 1.8rem;
+            }
+            
+            .stat-icon {
+                font-size: 1.8rem;
+            }
+            
+            .stat-card {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+            
+            .chart-container {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+            
+            .district-selector {
+                padding: 15px;
+            }
+            
+            .filter-label {
+                font-size: 0.9rem;
+                margin-bottom: 6px;
+            }
+            
+            .form-select {
+                font-size: 0.9rem;
+                padding: 8px;
+            }
+            
+            .btn-group {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                gap: 8px;
+                margin-top: 15px;
+            }
+            
+            .btn-group .btn {
+                width: 100%;
+            }
+            
+            .nav-tabs .nav-link {
+                padding: 10px 12px;
+                font-size: 0.85rem;
+            }
+            
+            .data-table {
+                font-size: 0.75rem;
+            }
+            
+            .table-responsive {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            .col-md-8, .col-md-4, .col-md-3, .col-md-6 {
+                text-align: left !important;
+            }
+            
+            .text-end {
+                text-align: left !important;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .page-title {
+                font-size: 1.2rem;
+            }
+            
+            .page-subtitle {
+                font-size: 0.8rem;
+            }
+            
+            .stat-number {
+                font-size: 1.5rem;
+            }
+            
+            .stat-icon {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+            }
+            
+            .stat-card {
+                padding: 12px;
+            }
+            
+            .chart-container {
+                padding: 12px;
+            }
+            
+            .nav-tabs {
+                flex-wrap: wrap;
+            }
+            
+            .nav-tabs .nav-link {
+                padding: 8px 10px;
+                font-size: 0.8rem;
+                flex: 1 1 auto;
+            }
+            
+            .data-table {
+                font-size: 0.7rem;
+            }
+            
+            .data-table th,
+            .data-table td {
+                padding: 6px 4px;
+                white-space: nowrap;
+            }
+            
+            .container {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
         }
     </style>
 </head>
